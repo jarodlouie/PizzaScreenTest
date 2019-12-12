@@ -15,16 +15,16 @@ function Button_Toggle_press(mapargs)
 end
 
 
-local o_state = 1
+local o_state = 0
 --- @param gre#context mapargs
 function but2_toggle(mapargs) 
      local sdata={}
     
-    if o_state == 1 then 
-       o_state = 2
+    if o_state == 0 then 
+       o_state = 1
        sdata["button_layer1.but2.image"]="images/but1_down.png"
     else
-      o_state = 1
+      o_state = 0
       sdata["button_layer1.but2.image"]="images/but1_up.png"  
     end
     gre.set_data(sdata)
